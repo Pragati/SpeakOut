@@ -1,0 +1,40 @@
+package com.sandeepkumarbehera.speakout;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+    }
+
+
+    public void onClickText(View view){
+        Intent i = new Intent(this, TextToSpeech.class);
+        startActivity(i);
+    }
+
+    public void VoiceRecog(View view){
+        Intent intent = new Intent(this, VoiceRecog.class);
+        startActivity(intent);
+    }
+
+
+}
